@@ -1,0 +1,52 @@
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: .6rem .8rem;
+  width: 100vw;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-grid-columns: auto auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto auto;
+  grid-column-gap: 4rem;
+  grid-row-gap: .6rem;
+}
+
+.day {
+  background: #dcdcdc;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.day h4 {
+  font-size: 1.3rem;
+  text-align: center;
+  margin: .5rem;
+}
+
+.day ul {
+  font-size: 1rem;
+  margin: 1.4rem 0;
+}
+
+.day ul li {
+  color: #272727;
+  font-variant: small-caps;
+}
+
+.day ul li b {
+  color: black;
+}
+
+.day p {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 25%;
+}
+/*# sourceMappingURL=style.css.map */

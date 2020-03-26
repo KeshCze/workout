@@ -1,0 +1,51 @@
+*,::before,::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding: .6rem .8rem;
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-column-gap: 4rem;
+    grid-row-gap: .6rem;
+}
+
+.day{
+    
+    
+    background: #dcdcdc;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+
+    h4{
+        font-size: 1.3rem;
+
+        text-align: center;
+        margin: .5rem;
+    }
+
+    ul{
+        font-size: 1rem;
+
+        margin: 1.4rem 0;
+
+        li{
+            color:#272727;
+            font-variant: small-caps;
+            b{
+                color: black;
+            }
+        }
+    }
+
+    p{
+        font-size: 1rem;
+
+        text-align: center;
+        margin-top: 25%;
+    }
+}
