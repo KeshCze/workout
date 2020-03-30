@@ -24,8 +24,14 @@ let workout = {
             else{
                 element.innerHTML = this.dayTemplate(tempObj);
             }
+            
+            if(this.isCurrDay(tempObj.date))
+            {
+                element.classList.add('current');
+            }
 
             container.appendChild(element);
+
 
             tempObj={
                 date: new Date(tempObj.date).setDate(new Date(tempObj.date).getDate()+1),
@@ -35,7 +41,17 @@ let workout = {
                 plank: tempObj.plank+this._coeficient.plank,
                 cruch: tempObj.cruch+this._coeficient.cruch,
             };
+        }        
+    },
+    isCurrDay(date){
+        let _date = new Date(date);
+        if( _date.getDate() === new Date().getDate() && 
+            _date.getMonth() === new Date().getMonth() && 
+            _date.getFullYear() === new Date().getFullYear())
+        {
+            return true;
         }
+        return false;
     },
     dayTemplate(dayRecord){
         // Format datetime

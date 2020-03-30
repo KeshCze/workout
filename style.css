@@ -49,4 +49,18 @@ body {
   text-align: center;
   margin-top: 25%;
 }
+
+.current {
+  background-color: green;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+  }
+  .day p {
+    margin-top: 7%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

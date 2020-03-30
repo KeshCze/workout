@@ -49,3 +49,17 @@ body{
         margin-top: 25%;
     }
 }
+
+.current{
+    background-color: green;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        grid-template-columns: auto;
+    }
+
+    .day p{
+        margin-top: 7%;
+    }
+  }
