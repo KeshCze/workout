@@ -1,5 +1,6 @@
 const staticCacheName = 'site-static';
 const assets = [
+  '',
   'index.html',
   'script.js',
   'style.css',
@@ -23,6 +24,19 @@ self.addEventListener('activate', evt => {
 });
 
 // fetch event
-self.addEventListener('fetch', evt => {
-  //console.log('fetch event', evt);
+self.addEventListener('fetch', event => {
+  if (event.request.url === "https://keshcze.github.io/workout/") {
+        // or whatever your app's URL is
+        event.respondWith(
+            fetch(event.request).catch(err =>
+                self.cache.open(staticCacheName).then(cache => cache.match("/offline.html"))
+            )
+        );
+    } else {
+        event.respondWith(
+            fetch(event.request).catch(err =>
+                caches.match(event.request).then(response => response)
+            )
+        );
+    }
 });
